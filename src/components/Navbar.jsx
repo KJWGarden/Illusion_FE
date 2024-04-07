@@ -1,9 +1,9 @@
 import * as React from "react";
 import Box from "@mui/material/Box";
-import { AppBar, Button, Toolbar, Typography } from "@mui/material";
+import {AppBar, Button, Link, Toolbar, Typography} from "@mui/material";
 
 function Navbar() {
-  const navItems = ["카테고리", "리뷰", "팀모집"];
+  //const navItems = ["카테고리", "리뷰", "팀모집"];
 
   return (
     <>
@@ -23,16 +23,29 @@ function Navbar() {
               display: { xs: "none", md: "flex" },
             }}
           >
-            {navItems.map((item) => (
+            <Link href={"/posts"}>
+                <Button
+                    sx={{
+                        color: "#fff",
+                    }}
+                >
+                    카테고리
+                </Button>
+            </Link>
               <Button
-                key={item}
-                sx={{
-                  color: "#fff",
-                }}
+                  sx={{
+                      color: "#fff",
+                  }}
               >
-                {item}
+                  리뷰
               </Button>
-            ))}
+              <Button
+                  sx={{
+                      color: "#fff",
+                  }}
+              >
+                  팀모집
+              </Button>
           </Box>
           <Box
             sx={{
