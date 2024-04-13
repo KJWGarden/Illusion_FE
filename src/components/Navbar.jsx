@@ -23,7 +23,7 @@ function Navbar() {
               display: { xs: "none", md: "flex" },
             }}
           >
-            <Link href={"/posts"}>
+            <Link href={"/postlist"}>
                 <Button
                     sx={{
                         color: "#fff",
