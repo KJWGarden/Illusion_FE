@@ -12,7 +12,7 @@ const router = createBrowserRouter([
         element: <App />,
         errorElement: <NotFound404 />,
         children: [
-            { path: "/posts", element: <PostListPage /> },
+            { path: "/postlist", element: <PostListPage /> },
         ]
     }
 ])

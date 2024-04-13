@@ -1,14 +1,29 @@
 import React from 'react';
 import Navbar from "../components/Navbar.jsx";
+import TextField from '@mui/material/TextField';
+import Button from '@mui/material/Button';
+import PostListBox from "../components/PostListBox.jsx";
+import PostListCategory from "../components/PostListCategory.jsx";
 
 function PostListPage(props) {
     return (
         <>
-            <Navbar />
-            <div>
-                <img src="https://post-phinf.pstatic.net/MjAyMTA2MDNfMTUx/MDAxNjIyNjg3NjU3NDE2.vLf83uJlSwbb1S_bg1juckTGpspocycfDobem93TGVYg.bewA41NI-qpLnevFBJ0O5g0isODkX2K5_DO0gmC1Pq8g.JPEG/IMG_3083.jpg?type=w800_q75" />
+            <div style={{ height: 64}}>
+                <Navbar />
             </div>
-            );
+            <div style={{ marginLeft: 80, marginRight: 80, marginTop: 50, marginBottom: 20,  display:"flex" }}>
+                <TextField id="outlined-basic" label="검색" variant="outlined"
+                sx={{ border: "lightgrey"}}/>
+                <PostListCategory />
+                <Button variant="outlined"
+                        sx={{ height: 56, width: 150, color: "grey", bgcolor: "white", marginLeft:85, fontSize: 15 }}>
+                    작품 등록
+                </Button>
+            </div>
+            <div style={{ display: 'flex' }}>
+                <PostListBox />
+                <PostListBox />
+            </div>
         </>
     )
 }
